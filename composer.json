@@ -1,0 +1,15 @@
+{
+    "name": "tomasvotruba/html-parser",
+    "license": "MIT",
+    "description": "Parse and traverse HTML using AST",
+    "require": {
+        "php": "^8.1",
+        "ext-dom": "*",
+        "nette/utils": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "HtmlParser\\": "src"
+        }
+    }
+}

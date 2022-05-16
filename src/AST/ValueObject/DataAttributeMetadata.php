@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace HtmlParser\ValueObject;
+namespace HtmlParser\AST\ValueObject;
 
 final class DataAttributeMetadata
 {

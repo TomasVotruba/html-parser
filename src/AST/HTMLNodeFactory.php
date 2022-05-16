@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 namespace HtmlParser\AST;
 
-use HtmlParser\ValueObject\HtmlNode;
 use DOMAttr;
 use DOMDocument;
 use DOMElement;
 use DOMNamedNodeMap;
 use DOMNode;
+use HtmlParser\AST\ValueObject\HtmlNode;
 use Nette\Utils\FileSystem;
-use Nette\Utils\Strings;
+
+use function iterator_to_array;
 
 final class HTMLNodeFactory
 {
@@ -69,7 +70,7 @@ final class HTMLNodeFactory
         $attributes = [];
 
         /** @var array<string, DOMAttr> $items */
-        $items = \iterator_to_array($attributesMap->getIterator());
+        $items = iterator_to_array($attributesMap->getIterator());
 
         foreach ($items as $attributeName => $item) {
             $attributes[$attributeName] = $item->value;

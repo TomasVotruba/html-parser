@@ -6,10 +6,14 @@ namespace HtmlParser\AST\ValueObject;
 
 final class HtmlNode
 {
+    /**
+     * @param array<string, mixed> $attributes
+     * @param HtmlNode[] $children
+     */
     public function __construct(
-        private string $name,
-        private array $attributes,
-        private array $children
+        private readonly string $name,
+        private readonly array $attributes,
+        private readonly array $children
     ) {
     }
 
